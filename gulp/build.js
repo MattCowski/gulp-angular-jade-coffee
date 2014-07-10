@@ -15,14 +15,20 @@ gulp.task('styles', function () {
 });
 
 gulp.task('scripts', function () {
-  return gulp.src('app/scripts/**/*.js')
+  return gulp.src('app/scripts/**/*.coffee')
+    .pipe($.coffee({
+      bare: true
+    }))
     .pipe($.jshint())
     .pipe($.jshint.reporter('jshint-stylish'))
     .pipe($.size());
 });
 
 gulp.task('partials', function () {
-  return gulp.src('app/partials/**/*.html')
+  return gulp.src('app/partials/**/*.jade')
+    .pipe($.jade({
+      pretty: true
+    }))
     .pipe($.minifyHtml({
       empty: true,
       spare: true,

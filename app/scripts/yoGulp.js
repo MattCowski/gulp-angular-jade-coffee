@@ -1,14 +1,14 @@
-'use strict';
+// 'use strict';
 
-angular.module('yoGulp', ['ui.router'])
-  .config(function ($stateProvider, $urlRouterProvider) {
-    $stateProvider
-      .state('home', {
-        url: "/",
-        templateUrl: 'partials/main.html',
-        controller: 'MainCtrl'
-      });
+// angular.module('yoGulp', ['ui.router'])
+//   .config(function ($stateProvider, $urlRouterProvider) {
+//     $stateProvider
+//       .state('home', {
+//         url: "/",
+//         templateUrl: 'partials/main.html',
+//         controller: 'MainCtrl'
+//       });
 
-    $urlRouterProvider.otherwise("/");
-  })
-;
+//     $urlRouterProvider.otherwise("/");
+//   })
+// ;

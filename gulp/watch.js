@@ -8,6 +8,7 @@ var $ = require('gulp-load-plugins')();
 
 gulp.task('watch', ['wiredep', 'styles'] ,function () {
   gulp.watch('app/styles/**/*.scss', ['styles']);
+  gulp.watch('app/scripts/**/*.coffee', ['scripts']);
   gulp.watch('app/scripts/**/*.js', ['scripts']);
   gulp.watch('app/images/**/*', ['images']);
   gulp.watch('bower.json', ['wiredep']);
