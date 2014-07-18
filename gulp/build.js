@@ -21,6 +21,7 @@ gulp.task('scripts', function () {
     }))
     .pipe($.jshint())
     .pipe($.jshint.reporter('jshint-stylish'))
+    .pipe(gulp.dest('.tmp/scripts'))
     .pipe($.size());
 });
 
